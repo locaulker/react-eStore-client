@@ -3,7 +3,8 @@
 Fonts
 ======
 */
-@import url("https://fonts.googleapis.com/css?family=Catamaran:300,400|Kaushan+Script&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Catamaran:300,400|Kaushan+Script&display=swap"); */
+@import url("https://fonts.googleapis.com/css?family=Kaushan+Script|Open+Sans+Condensed:300,700&display=swap");
 /* 
 ====== 
 Variables 
@@ -12,10 +13,13 @@ Variables
 :root {
   /* --primaryColor: #9e3aa3; */
   /* --primaryDarkColor: #4e1d51; */
+  --primaryFont: "Open Sans Condensed", sans-serif;
+  /* --primaryFont: "Catamaran", sans-serif; */
+  --slantedFont: "Kaushan Script", cursive;
+
   --primaryColor: #f15025;
   --primaryDarkColor: #c02c03;
-  --primaryFont: "Catamaran", sans-serif;
-  --slantedFont: "Kaushan Script", cursive;
+
   --mainWhite: #fff;
   --offWhite: #f7f7f7;
   --mainBackground: #ececec;
@@ -25,7 +29,7 @@ Variables
   --darkGrey: #afafaf;
   --mainRed: #bd0303;
   --mainTransition: all 0.3s linear;
-  --mainSpacing: 0.3rem;
+  --mainSpacing: 0.2rem;
   --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
   --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   --mainBorderRadius: 0.25rem;
@@ -61,6 +65,10 @@ h6 {
   font-family: var(--primaryFont);
   margin-bottom: 1.25rem;
   letter-spacing: var(--mainSpacing);
+}
+
+h1 {
+  font-weight: 300;
 }
 p {
   margin-bottom: 1.25rem;
