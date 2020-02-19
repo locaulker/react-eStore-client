@@ -16,9 +16,13 @@ import Products from './pages/Products'
 import ProductDetails from './pages/ProductDetails'
 
 // Components
+import Header from './components/Header'
+
+
 const App = () => {
   return (
     <Router>
+      <Header />
       <Switch>
         <Route exact path="/"><Home /></Route>
         <Route path="/about"><About /></Route>
