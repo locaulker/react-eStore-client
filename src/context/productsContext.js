@@ -20,9 +20,7 @@ const ProductProvider = ({ children }) => {
         setLoading(false)
       })
 
-    return () => {
-
-    }
+    return () => { }
   }, [])
 
   return (

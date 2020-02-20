@@ -68,9 +68,9 @@ h6 {
   letter-spacing: var(--mainSpacing);
 }
 
-h1 {
+/* h1 {
   font-weight: 300;
-}
+} */
 p {
   margin-bottom: 1.25rem;
 }
