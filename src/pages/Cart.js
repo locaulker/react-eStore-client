@@ -1,10 +1,45 @@
 import React from 'react'
+import { CartContext } from '../context/cartContext'
+import EmptyCart from '../components/Cart/EmptyCart'
+import CartItem from '../components/Cart/CartItem'
+import { Link } from 'react-router-dom'
+
+// import { UserContext } from '../context/userContext'
 
 const Cart = () => {
+  let user = false
+
+  const { cart, total } = React.useContext(CartContext)
+
+  if (cart.length === 0) {
+    return (
+      <EmptyCart />
+    )
+  }
+
   return (
-    <div>
-      hello from Cart Page
-    </div>
+    <section className="cart-items section">
+
+      {/* Cart Title */}
+      <h2>Your Cart</h2>
+
+      {/* loop through Cart Items */}
+      {cart.map(item => {
+        return (
+          <CartItem key={item.id} {...item} />
+        )
+      })}
+
+      {/* Cart Totals */}
+      <h2>Total: ${total}</h2>
+
+      {/* Ternary Operator */}
+      {user
+        ? <Link to="/checkout" className="btn brn-primary btn-block">Checkout</Link>
+        : <Link to="/login" className="btn brn-primary btn-block">Please Login</Link>
+      }
+
+    </section>
   )
 }
 
