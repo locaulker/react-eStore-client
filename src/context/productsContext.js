@@ -1,6 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import url from '../utils/URL'
+import { featuredProducts } from '../utils/helpers'
 
 export const ProductContext = React.createContext()
 // React.createContext gives us access to two new components
@@ -16,7 +17,9 @@ const ProductProvider = ({ children }) => {
     axios
       .get(`${url}/products`)
       .then(response => {
+        const featured = featuredProducts(response.data)
         setProducts(response.data)
+        setFeatured(featured)
         setLoading(false)
       })
 

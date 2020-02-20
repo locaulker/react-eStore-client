@@ -1,17 +1,17 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Error = () => {
+const Contact = () => {
   return (
-    <section className="error-page section">
+    <section className="section">
+      <h1 className="section-title">Contact Us</h1>
       <div className="error-container">
-        <h1>Oops! 404 Page Not Found</h1>
         <Link to="/" className="btn btn-primary">
           back home
-        </Link>
+      </Link>
       </div>
     </section>
   )
 }
 
-export default Error
+export default Contact

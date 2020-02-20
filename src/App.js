@@ -9,6 +9,7 @@ import {
 import About from './pages/About'
 import Cart from './pages/Cart'
 import Checkout from './pages/Checkout'
+import Contact from './pages/Contact'
 import Error from './pages/Error'
 import Home from './pages/Home'
 import Login from './pages/Login'
@@ -28,6 +29,7 @@ const App = () => {
         <Route path="/about"><About /></Route>
         <Route path="/cart"><Cart /></Route>
         <Route path="/checkout"><Checkout /></Route>
+        <Route path="/contact"><Contact /></Route>
         <Route path="/login"><Login /></Route>
         <Route exact path="/products"><Products /></Route>
 
