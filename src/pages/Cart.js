@@ -31,7 +31,7 @@ const Cart = () => {
       })}
 
       {/* Cart Totals */}
-      <h2>Total: ${total}</h2>
+      <h2>Total: {total}</h2>
 
       {/* Ternary Operator */}
       {user

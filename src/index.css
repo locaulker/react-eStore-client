@@ -107,7 +107,7 @@ Buttons
   text-transform: uppercase;
   letter-spacing: var(--mainSpacing);
   color: var(--primaryColor);
-  border: 2px solid var(--primaryColor);
+  border: 1px solid var(--primaryColor);
   padding: 0.45rem 0.8rem;
   display: inline-block;
   transition: var(--mainTransition);
@@ -445,10 +445,14 @@ Cart
   cursor: pointer;
 }
 .remove-btn {
-  color: var(--darkGrey);
+  /* color: var(--darkGrey); */
+  color: var(--primaryColor);
   letter-spacing: var(--mainSpacing);
   cursor: pointer;
   font-size: 0.8rem;
+}
+.remove-btn:hover {
+  color: var(--darkGrey);
 }
 .amount-btn {
   color: var(--primaryColor);
