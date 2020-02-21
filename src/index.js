@@ -6,7 +6,7 @@ import { CartProvider } from './context/cartContext'
 
 import "./index.css"
 import App from "./App"
-import Cart from './pages/Cart'
+// import Cart from './pages/Cart'
 
 ReactDOM.render(
 
