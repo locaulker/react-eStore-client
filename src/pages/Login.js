@@ -22,7 +22,7 @@ const Login = () => {
   const [username, setUsername] = React.useState('default')
   const [isMember, setIsMember] = React.useState(true)
 
-  let isEmpty = !email || !password || !username
+  let isEmpty = !email || !password || !username || alert.show
 
   const toggleMember = () => {
     setIsMember((prevMember) => {
@@ -33,6 +33,9 @@ const Login = () => {
   }
 
   const handleSubmit = async (e) => {
+    showAlert({
+      msg: 'accessing user info. Please wait...'
+    })
     // alert
     e.preventDefault()
 

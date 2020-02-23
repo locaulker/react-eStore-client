@@ -19,7 +19,7 @@ import ProductDetails from './pages/ProductDetails'
 // Components
 import Header from './components/Header'
 import Alert from './components/Alert'
-
+import PrivateRoute from './components/PrivateRoute'
 
 const App = () => {
   return (
@@ -30,7 +30,9 @@ const App = () => {
         <Route exact path="/"><Home /></Route>
         <Route path="/about"><About /></Route>
         <Route path="/cart"><Cart /></Route>
-        <Route path="/checkout"><Checkout /></Route>
+
+        <PrivateRoute path="/checkout" name="John" msg="Hello"><Checkout /></PrivateRoute>
+
         <Route path="/contact"><Contact /></Route>
         <Route path="/login"><Login /></Route>
         <Route exact path="/products"><Products /></Route>
