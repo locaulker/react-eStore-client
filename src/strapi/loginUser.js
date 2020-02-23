@@ -1,4 +1,3 @@
-//login user
 import axios from 'axios'
 import url from '../utils/URL'
 

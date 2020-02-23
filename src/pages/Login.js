@@ -6,12 +6,15 @@ import registerUser from '../strapi/registerUser'
 
 // Handle user
 import { useHistory } from 'react-router-dom'
+import { userContext, UserContext } from '../context/userContext'
 
 
 const Login = () => {
   const history = useHistory()
 
   // Setup userContext
+  const { userLogin, alert, showAlert } = React.useContext(UserContext)
+
 
   // State values
   const [email, setEmail] = React.useState('')
@@ -40,10 +43,19 @@ const Login = () => {
       response = await registerUser({ email, password, username })
     }
     if (response) {
-      // 
-      console.log('success')
-      console.log(response)
+      // console.log(response)
+      const { jwt: token, user: { username } } = response.data
+      const newUser = { token, username }
+      userLogin(newUser)
+      showAlert({
+        msg: `Success! Welcome ${username}`
+      })
+      history.push('/products')
     } else {
+      showAlert({
+        msg: "Oops! Wrong Email or Password. Please try again...",
+        type: "danger"
+      })
       //  Show alert
     }
   }

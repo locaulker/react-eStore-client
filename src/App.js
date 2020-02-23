@@ -18,12 +18,14 @@ import ProductDetails from './pages/ProductDetails'
 
 // Components
 import Header from './components/Header'
+import Alert from './components/Alert'
 
 
 const App = () => {
   return (
     <Router>
       <Header />
+      <Alert />
       <Switch>
         <Route exact path="/"><Home /></Route>
         <Route path="/about"><About /></Route>
