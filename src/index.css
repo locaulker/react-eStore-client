@@ -649,6 +649,11 @@ Checkout
 .checkout-form button {
   margin-top: 1rem;
 }
+
+.InputElement {
+  border: 1px solid #000;
+  padding: 2rem 0;
+}
 /* 
 ====== 
 Scroll Button

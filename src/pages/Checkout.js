@@ -5,6 +5,13 @@ import { useHistory } from 'react-router-dom'
 import EmptyCart from '../components/Cart/EmptyCart'
 
 // react-stripe-elements
+import {
+  CardElement,
+  StripeProvider,
+  Elements,
+  injectStripe
+} from 'react-stripe-elements'
+
 import submitOrder from '../strapi/submitOrder'
 
 const Checkout = (props) => {
@@ -55,7 +62,8 @@ const Checkout = (props) => {
           </p>
         </div>
 
-        {/* Stripe Element */}
+        {/* Stripe Elements */}
+        <CardElement className="card-element"></CardElement>
 
         {/* Stripe Errors */}
         {error && <p className="form-empty">{error}</p>}
@@ -74,4 +82,20 @@ const Checkout = (props) => {
   )
 }
 
-export default Checkout
+
+
+const CardForm = injectStripe(Checkout)
+
+const StripeWrapper = () => {
+  return (
+    <StripeProvider
+      apiKey="pk_test_EcV4CXTwYFIIUDCCRwj1MNNI00lKdRNfAV"
+    >
+      <Elements>
+        <CardForm></CardForm>
+      </Elements>
+    </StripeProvider>
+  )
+}
+
+export default StripeWrapper
